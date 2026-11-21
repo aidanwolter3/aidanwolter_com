@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Scripts only from this site and the pod's server, which serves The Construct's web client. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://the-construct-pod.fly.dev 'wasm-unsafe-eval'; connect-src https://the-construct-pod.fly.dev; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Aidan Wolter</title>
+  <meta name="description" content="Aidan Wolter's site." />
+  <meta name="theme-color" content="#090a0f" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aidan Wolter" />
+  <meta property="og:description" content="Aidan Wolter's site." />
+  <link rel="stylesheet" href="/construct.css" />
+</head>
+<body>
+  <main class="gate">
+    <p><a href="/">aidanwolter.com</a></p>
+    <p id="construct-status" role="status" hidden></p>
+  </main>
+  <div id="construct-root" data-mode="public" data-handle="aidan"></div>
+  <script type="module" src="https://the-construct-pod.fly.dev/web/mount.js"></script>
+</body>
+</html>
