@@ -1,57 +1,25 @@
 # Aidan Wolter - Personal Website (`aidanwolter.com`)
 
-A slick, lightweight, 100% static personal website for Staff Software Engineer Aidan Wolter.
+A plain, static personal site: one page with a short bio, work history, a few projects and links. No build step and
+no scripts on the home page; `index.html`, `style.css` and `favicon.svg` are the whole of it.
 
-## 🚀 Two Synchronized Interfaces
+- **Look**: ivory background (`#f6f4ef`), ink text, Newsreader for headings and Inter for body text (Google Fonts),
+  blue (`#1f3fbf`) only on link underlines. Colours are variables at the top of `style.css`.
+- **Favicon**: an AW monogram, ink on ivory, where the A's right leg is the W's first stroke. It is drawn with
+  shapes rather than text, so it doesn't depend on a font.
+- **Phones**: the sections stack on narrow screens; there is no separate mobile layout.
 
-The site features two interactive presentation modes with responsive defaults (Terminal on desktop, Spotlight on mobile, toggleable anytime):
-
-1. **Modern Unix Terminal (`Ghostty / Zsh` aesthetic)**
-   - Monospace typography, acrylic blur titlebar, traffic light window controls.
-   - Interactive shell with command history (`↑` / `↓`), tab completion, and clear (`Ctrl+L`).
-   - Grounded commands: `whoami`, `experience`, `projects`, `skills`, `neofetch`, `linkedin`, `github`, `contact`, `matrix`, `theme`, `clear`.
-   - Matrix digital rain animation overlay (`matrix` command or button).
-   - Touch-friendly quick command pills for mobile visitors.
-
-2. **Raycast / Spotlight Command Palette**
-   - High-end dark editorial card with ambient glowing mesh background.
-   - Press <kbd>⌘</kbd> + <kbd>K</kbd> (or click the search bar) to open a floating Raycast-style command palette with frosted glass backdrop blur.
-   - Instant fuzzy filtering across career history (Google L6, Garmin, Tyler JC), projects, LinkedIn, and themes.
-   - Synthesized mechanical switch audio haptics using the Web Audio API (toggleable).
-   - Interactive modal dialogs for career timeline and open-source projects.
-
-3. **View Switcher & Responsive Defaults**
-   - **Desktop (> 768px)**: Defaults to **Terminal** mode.
-   - **Mobile (≤ 768px)**: Defaults to **Spotlight** mode.
-   - Switch anytime with header buttons or shortcuts: <kbd>Alt</kbd> + <kbd>1</kbd> (Terminal), <kbd>Alt</kbd> + <kbd>2</kbd> (Spotlight), <kbd>Alt</kbd> + <kbd>3</kbd> (Split).
-
----
-
-## 🛠 Local Development & Preview
-
-To preview locally, start a quick static HTTP server:
+## 🛠 Local preview
 
 ```bash
-# Using Python 3:
 python3 -m http.server 8000
-
-# Or using Node:
-npx serve .
 ```
 
-Then visit [http://localhost:8000](http://localhost:8000) in your browser.
+Then visit [http://localhost:8000](http://localhost:8000).
 
----
+## 🌐 Hosting
 
-## 🌐 100% Free Hosting on GitHub Pages
-
-Because this site is built with pure, zero-dependency modern HTML, CSS, and vanilla ES modules:
-- No npm build steps, Webpack, or Bundlers required.
-- **GitHub Pages setup**:
-  1. Create a repository on GitHub (e.g. `aidanwolter3/aidanwolter3.github.io` or `aidanwolter3/aidanwolter.com`).
-  2. Push this directory to the repository.
-  3. Go to **Settings** → **Pages** → Source: `Deploy from a branch` (`main` / root `/`).
-  4. Your site will be live instantly with a free SSL certificate!
+GitHub Pages from `main` (root `/`), with `CNAME` pointing at aidanwolter.com.
 
 ---
 
