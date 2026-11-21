@@ -52,3 +52,22 @@ Because this site is built with pure, zero-dependency modern HTML, CSS, and vani
   2. Push this directory to the repository.
   3. Go to **Settings** → **Pages** → Source: `Deploy from a branch` (`main` / root `/`).
   4. Your site will be live instantly with a free SSL certificate!
+
+---
+
+## 🧩 The Construct pages
+
+`/construct/`, `/events/`, `/recipes/` and `/design/` are drawn by The Construct's web client, loaded from the pod
+server (`https://the-construct-pod.fly.dev/web/mount.js`), which lists this site in `CONSTRUCT_SITE_ORIGINS`
+(The Construct's decision `site-origins`). The site stays static; the client and its data come from the server.
+
+- **`/construct/`** opens Aidan's pod. "Open my pod" goes to the server's own page for the pod code, which sends
+  the browser back here with a session kept in this site's `localStorage`.
+- **`/events/`, `/recipes/`, `/design/`** are the public links `/aidan/<slug>`, for anyone. A row's own address,
+  such as `/recipes/<recipe>`, has no file: `404.html` (the same page) opens it.
+- To add another public link at `/<slug>/`, share it with that slug in the pod, then copy `recipes/index.html` to
+  `<slug>/index.html` and change its title and description.
+- Each page's Content-Security-Policy allows scripts only from this site and the pod server. The pod's session lives
+  on this origin, so keep third-party scripts (analytics, embeds) off these pages.
+- `construct.css` styles them.
+
